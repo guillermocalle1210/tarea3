@@ -1,0 +1,54 @@
+.contenedor /*padre*/
+{
+    background-color: aqua;
+    padding: 10px;
+    display: grid; /*activar grillas*/
+    font-size: 25px;
+    grid-gap: 10px; 
+    text-align: center; /*letras al centro*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 10fr 1fr;
+    grid-template-areas: "cabecera   cabecera   cabecera"
+                         "menu       menu       menu"
+                         "contenido      contenido     publi"
+                         "pie        pie        pie";
+
+    
+}
+.contenedor>div
+{
+    background-color: chartreuse;
+}
+.contenedor .cabecera
+{
+    background-color: yellow;
+    grid-column: cabecera;
+
+}
+.contenedor .menu
+{
+    background-color: coral;
+    grid-column: menu;
+}
+.contenedor .contenido
+{
+    background-color: beige;
+    grid-column: contenido;
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 3fr 3fr;
+}
+.contenedor .publi
+{
+    background-color: antiquewhite;
+    grid-column: publi;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+
+}
+.contenedor .pie
+{
+    background-color: rgb(187, 187, 209);
+    grid-column: pie;
+    text-align: center;
+}
